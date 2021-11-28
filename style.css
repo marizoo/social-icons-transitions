@@ -1,0 +1,465 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 100vh;
+
+}
+
+/* ------------ */
+/* 05-Rotation-animation */
+.main5{
+  height: 400px;
+  width: 500px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container5{
+  width: 60px;
+  height: 60px; 
+  position: relative;
+}
+
+.main-icon5{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  position: absolute;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.button5{
+  width: 30px;
+  height: 30px;
+  background-color: slateblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  transition: all .3s ease-in-out;
+}
+
+.button5:nth-child(1){
+  top:0;
+  left:0;
+  border-radius: 10px 0 0 0;
+}
+.button5:nth-child(2){
+  top:0;
+  right:0;
+  border-radius: 0 10px 0 0 ;
+}
+.button5:nth-child(3){
+  bottom:0;
+  right:0;
+  border-radius: 0 0 10px 0;
+}
+.button5:nth-child(4){
+  bottom:0;
+  left:0;
+  border-radius: 0 0 0 10px;
+}
+
+.icon5-sm{
+  opacity: 0;
+}
+
+.container5:hover .icon5-sm{
+opacity: 1;
+}
+
+.container5:hover .main-icon5{
+  transform: scale(4.3) rotate(45deg);
+}
+
+.container5:hover .button5{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.container5:hover .button5:nth-child(1){
+transform: translate(5px, -50px);
+}
+.container5:hover .button5:nth-child(2){
+transform: translate(50px, 5px);
+}
+.container5:hover .button5:nth-child(3){
+transform: translate(-5px, 50px);
+}
+.container5:hover .button5:nth-child(4){
+transform: translate(-50px, -5px);
+}
+
+/* 05-Rotation-animation */
+/* ------------ */
+
+
+/* ------------ */
+/* 04-Button-animation */
+.container4{
+  height: 80px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightyellow;
+  border: 1px solid black;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.container4-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 50px;
+  background-color: dodgerblue;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button4{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.icons4{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -50px;
+  /* background-color: black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.text4{
+  transition: all 0.2s ease-in;
+}
+.share4{
+  transition: all 0.3s ease-in;
+}
+
+.icon4:nth-child(1){
+  transition: all 0.2s ease-in;
+}
+.icon4:nth-child(2){
+  transition: all 0.3s ease-in;
+}
+.icon4:nth-child(3){
+  transition: all 0.4s ease-in;
+}
+
+.container4-1:hover .icon4:nth-child(1){
+
+}
+
+.container4-1:hover .text4, 
+.container4-1:hover .share4, 
+.container4-1:hover .icon4{
+transform: translateY(-50px);
+}
+
+
+/* 04-Button-animation */
+/* ------------ */
+
+
+/* ------------ */
+/* 03-Project-Layer Animation */
+.container3{
+  height: 310px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightskyblue;
+  border: 1px solid black;
+}
+
+.container3-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 100px;
+  height: 50px;
+  background-color: lightslategray; */
+  transform: rotate(-25deg) skew(25deg);
+}
+
+.button3{
+  height: 60px;
+  width: 60px;
+  /* background-color: black;  */
+  margin: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.button3::before{
+  content:"";
+  width: 100%;
+  height: 10px;
+  background-color: #333;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  transform: skewX(-45deg);
+  transform-origin: top;
+}
+
+.button3::after{
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: #333;
+  position: absolute;
+  left:-10px;
+  top: 0;
+  transform: skewY(-45deg);
+  transform-origin: right;
+}
+
+span3{
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  position: absolute;
+  top:0;
+  left:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  transition: all 1s ease-out;
+  border: .5px solid rgb(112, 111, 111);
+}
+
+.button3:hover span3:nth-child(5){
+transform: translate(40px, -40px);
+}
+.button3:hover span3:nth-child(4){
+transform: translate(30px, -30px);
+opacity: 0.8;
+}
+.button3:hover span3:nth-child(3){
+transform: translate(20px, -20px);
+opacity: 0.6;
+}
+.button3:hover span3:nth-child(2){
+transform: translate(10px, -10px);
+opacity: 0.4;
+}
+.button3:hover span3:nth-child(1){
+transform: translate(0px, -0px);
+opacity: 0.2;
+}
+
+.button3:nth-child(1):hover span3{
+  background-color: royalblue;
+}
+.button3:nth-child(2):hover span3{
+  background-color: tomato;
+}
+.button3:nth-child(3):hover span3{
+  background-color: dodgerblue;
+}
+.button3:nth-child(4):hover span3{
+  background-color: red;
+}
+
+
+
+/* 03-Project-Layer Animation */
+/* ------------ */
+
+
+/* ------------ */
+/* 02-Background Animation */
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.button2{
+  width: 50px;
+  height: 50px;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  position: relative;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.icon2 {
+  z-index: 2;
+}
+
+.fill2{
+  width: 120%;
+  height: 120%;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  transition: all 0.5s ease;
+}
+
+.button2:hover .fill2{
+transform: translate(45px, -45px)
+}
+.button2:hover .icon2{
+color: white;
+}
+
+/* 02-Background Animation */
+/* ------------- */
+
+
+/* ---------------- */
+/* 01-Border Animation */
+
+.container1 {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 100px;
+  background-color: lightpink;
+  border-radius: 30px;
+}
+
+.button1 {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+ 
+}
+
+img {
+  width: 30%;
+  height: 30%;
+}
+
+.circle1 {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+}
+
+.circle-1 {
+  border: 1px solid rgb(77, 153, 240);
+  transition: opacity 1s ease;
+}
+.circle-2 {
+  width: 60%;
+  height: 60%;
+  border: 1.5px solid rgb(37, 130, 236);
+  transition: opacity 1s 0.2s ease;
+}
+.circle-3 {
+  border: 2px dashed rgb(64, 111, 243);
+  transition: transform 1s ease, opacity 0.5s ease;
+}
+
+.facebook:hover .circle-1,
+.facebook:hover .circle-2 {
+  opacity: 1;
+}
+
+.instagram:hover .circle-3 {
+  transform: rotate(360deg);
+  opacity: 1;
+}
+
+.twitter {
+  transition: all 1s ease-out;
+}
+
+.twitter:hover {
+  transform: rotate(360deg);
+} 
+/* 01-Border Animation */
+/* ----------------- */
+
+
+
+
+/*  Other css Syntax */
+/* -------------------- */
+/*
+.x {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: black;
+  top: 50%;
+}
+.y {
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  background-color: black;
+  left: 50%;
+  top: 0;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: all 1s ease;
+  transform-origin: bottom left;
+}
+
+.item:hover {
+  transform: rotate(50deg);
+} */
+
+/* 	 transform: translate3d(20px, 20px, 20px);
+	  transform: rotate3d(1, 1, 1, 50deg); */
+    /* -------------------- */
+    /*  Other css Syntax
